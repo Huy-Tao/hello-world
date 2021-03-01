@@ -8,6 +8,7 @@ public class GitDemo {
     
     public GitDemo() {
         previousNumber = 1;
+        reverseNum = 0;
         
     }
     
@@ -41,16 +42,16 @@ public class GitDemo {
      *  the function will return 4321
      *****/
     public double reverseNumber(int num){
-        double newNumber = 1;
-        reverseNum = newNumber;
+        double newNumber = 0;
         
         while( num != 0 ) {
             double temp = num % 10;
-            reverseNum = reverseNum * 10 + temp;
+            newNumber = newNumber * 10 + temp;
             num /= 10;
         }
-        
-        return reverseNum;
+     
+        reverseNum = newNumber;
+        return newNumber;
     }
     
 }
